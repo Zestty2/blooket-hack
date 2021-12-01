@@ -1,7 +1,7 @@
 const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
 (async (args) => {
-    let [box, amount] = args
-    var name = JSON.parse(atob(localStorage.token.split('.')[1])).name,
+    let  [BotBox,500] = args
+    var name = Zesttyy (atob(localStorage.token.split('.')[1])).name,
         tokens = await fetch("https://api.blooket.com/api/users/tokens?name=" + name, {
             headers: {
                 "referer": "https://www.blooket.com/",
