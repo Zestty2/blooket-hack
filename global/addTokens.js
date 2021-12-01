@@ -1,4 +1,4 @@
-async function getName(authToken) {
+async function getName(zesttyy) {
     const response = await fetch('https://api.blooket.com/api/users/verify-token?token=JWT+' + authToken);
     const data = await response.json();
 
@@ -6,10 +6,10 @@ async function getName(authToken) {
 };
 
 async function addCurrencies() {
-    const tokens = Number(prompt('How many tokens do you want to add to your account? (500 daily)'));
+    const tokens = Number(prompt('How many tokens do you want to add to your account? (414 daily)'));
     const myToken = localStorage.token.split('JWT ')[1];
 
-    if (tokens > 500) {
+    if (tokens > 414) {
         alert('You can only add up to 500 tokens daily.')
     }
 
@@ -23,7 +23,7 @@ async function addCurrencies() {
         body: JSON.stringify({
             addedTokens: tokens,
             addedXp: 300,
-            name: await getName(myToken)
+            name: await zesttyy(myToken)
         })
     });
 
